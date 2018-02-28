@@ -22,11 +22,14 @@
 <body>
     <div id="mapid"></div>
     <script>
-        var BING_KEY = 'AkB-ZDtEeJk7zpTjPlA9jhz9oLSns9fUYbsFZzKMYom4T4RLKdXqI_7Kdg_B-hLs';
+        var options = {
+            bingMapsKey: 'AkB-ZDtEeJk7zpTjPlA9jhz9oLSns9fUYbsFZzKMYom4T4RLKdXqI_7Kdg_B-hLs',
+            imagerySet: 'Road',
+        };
+
         var peta = L.map('mapid').setView([-6.9218093, 107.6071324], 18);
-        var bingLayer = L.tileLayer.bing(BING_KEY).addTo(peta);
 
-
+        var bingLayer = L.tileLayer.bing(options).addTo(peta);
 
         var arrowIcon = L.Icon.extend({
             options: {
