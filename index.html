@@ -9,6 +9,7 @@
     <link href='http://cdn.leafletjs.com/leaflet/v1.0.0-rc.1/leaflet.css' rel='stylesheet' />
 	<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise"></script>
     <script src="leaflet-bing-layer.js"></script>
+    <script src="leaflet.rotatedMarker.js" charset="utf-8"></script>
     <style media="screen">
         body {
             margin: 0;
@@ -45,15 +46,21 @@
             arrowy = new arrowIcon({iconUrl: 'arrow/yellow.png'}),
             arrowp = new arrowIcon({iconUrl: 'arrow/purple.png'});
 
+        var random1 = Math.floor(Math.random()*360+1);
+        var random2 = Math.floor(Math.random()*360+1);
+        var random3 = Math.floor(Math.random()*360+1);
+        var random4 = Math.floor(Math.random()*360+1);
+        var random5 = Math.floor(Math.random()*360+1);
+
         L.icon = function (options) {
             return new L.Icon(options);
         };
 
-        L.marker([-6.92194, 107.60717], {icon: arrowr}).addTo(peta).bindPopup('Alun-alun Kota').openPopup();
-        L.marker([-6.92180, 107.60629], {icon: arrowg}).addTo(peta).bindPopup('Masjid Agung ').openPopup();
-        L.marker([-6.92079, 107.60633], {icon: arrowb}).addTo(peta).bindPopup('Kantor Pos Asia Afrika').openPopup();
-        L.marker([-6.92093, 107.60839], {icon: arrowy}).addTo(peta).bindPopup('PT. PLN').openPopup();
-        L.marker([-6.92084, 107.60714], {icon: arrowp}).addTo(peta).bindPopup('Gedung Waskita').openPopup();
+        L.marker([-6.92194, 107.60717], {icon: arrowr, rotationAngle: random1}).addTo(peta).bindPopup('Alun-alun Kota').openPopup();
+        L.marker([-6.92180, 107.60629], {icon: arrowg, rotationAngle: random2}).addTo(peta).bindPopup('Masjid Agung ').openPopup();
+        L.marker([-6.92079, 107.60633], {icon: arrowb, rotationAngle: random3}).addTo(peta).bindPopup('Kantor Pos Asia Afrika').openPopup();
+        L.marker([-6.92093, 107.60839], {icon: arrowy, rotationAngle: random4}).addTo(peta).bindPopup('PT. PLN').openPopup();
+        L.marker([-6.92084, 107.60714], {icon: arrowp, rotationAngle: random5}).addTo(peta).bindPopup('Gedung Waskita').openPopup();
     </script>
 </body>
 </html>
